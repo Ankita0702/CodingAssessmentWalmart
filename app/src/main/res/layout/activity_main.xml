@@ -18,7 +18,6 @@
             android:title="@string/app_name" />
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- Your fragment container; this will not go behind the app bar -->
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"

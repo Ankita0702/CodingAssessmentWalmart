@@ -2,7 +2,6 @@ package com.example.codingassessmentwalmart.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.WindowCompat
 import com.example.codingassessmentwalmart.R
 
 class MainActivity : AppCompatActivity() {

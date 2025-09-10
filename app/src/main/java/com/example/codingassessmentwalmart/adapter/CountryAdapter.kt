@@ -14,7 +14,6 @@ class CountryAdapter :
     companion object {
         private val DIFF = object : DiffUtil.ItemCallback<Country>() {
             override fun areItemsTheSame(oldItem: Country, newItem: Country): Boolean {
-                // Assuming code is unique enough; fallback to name+code if needed
                 return oldItem.code == newItem.code
             }
             override fun areContentsTheSame(oldItem: Country, newItem: Country): Boolean {

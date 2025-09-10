@@ -29,12 +29,11 @@ class CountryListFragment : Fragment(R.layout.fragment_country_list) {
             adapter = this@CountryListFragment.adapter
         }
 
+        viewModel = ViewModelProvider(this)[CountryViewModel::class.java]
         binding.buttonRetry.setOnClickListener { viewModel.loadCountries(force = true) }
 
-        viewModel = ViewModelProvider(this)[CountryViewModel::class.java]
-
         viewModel.countries.observe(viewLifecycleOwner) { list ->
-            adapter.submitList(list) // ListAdapter handles diffs
+            adapter.submitList(list)
         }
         viewModel.loading.observe(viewLifecycleOwner) { loading ->
             binding.progressBar.isVisible = loading
